@@ -77,7 +77,7 @@ function question() {
             rg4.type = "radio"
             break;
         case 3:
-            domanda.innerHTML = "Quali sono le caratteristiche del Process Table?"
+            domanda.innerHTML = "Quali sono le caratteristiche del Process Table? (solo 2 risposte)"
             r1.innerHTML = "E' un identificativo numerico univoco";
             r2.innerHTML = "E' contiene tutti i PCB dei singoli processi";
             r3.innerHTML = "E' sempre a disposizione le informazioni sullo stato del processo";
@@ -90,7 +90,7 @@ function question() {
 
             break;
         case 4:
-            domanda.innerHTML = "Qual è la definizione dello stato di TERMINATED di un processo?"
+            domanda.innerHTML = "Qual è la definizione dello stato di TERMINATED di un processo? (solo due risposte)"
             r1.innerHTML = "Tutto il codice del processo è stato eseguito";
             r2.innerHTML = "Nei sistemi monoprocessore solo un processo può essere in questo stato";
             r3.innerHTML = "il codice del programma è letto dal disco, è caricato in RAM e ne diventa il processo";
