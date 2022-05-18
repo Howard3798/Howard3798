@@ -29,7 +29,7 @@ function question() {
     cont++;// conta la domanda effettuata
     numero = Math.floor(Math.random() * domandaArray.length)// la variabile 'numero' viene assegnato (casualmente) un numero compreso da 0 alla lunghezza dell'array. 
     ru.style.visibility = "hidden"
-
+    document.getElementById('button3').style.visibility = 'hidden'
     r1.style.color = "black";
     r2.style.color = "black";
     r3.style.color = "black";
@@ -120,7 +120,6 @@ function question() {
     document.getElementById('button2').style.visibility = 'hidden'
 
     if (ultimaDomanda == domandaArray.length) { // Questa condizione mi serve per cambiare il valore del bottone
-        document.getElementById('button').value = 'TERMINA'
         switch (domandaArray[numero]) {
             case 0:
                 domanda.innerHTML = 'Qual è la caratteristica più importante del modello computazionale competitivo?'
@@ -315,12 +314,11 @@ function conferma() {
                 r4.style.color = "red";
                 r3.style.color = "red";
                 break;
-                
-                
+                               
         }
-        document.getElementById('formDomanda').style.visibility = 'hidden'
         document.getElementById('button').style.visibility = 'hidden'
-        document.getElementById('domanda').innerHTML = "HAI FINITO. <br> Ci sono state "+cont+" domande tra cui:<br> - "+contEsatto+" risposte corrette <br> - "+contSbagliato+ " risposte sbagliate" ;
+        document.getElementById('button3').style.visibility = 'visible'
+        
     }
     else{
         switch (domandaArray[numero]) {
@@ -422,4 +420,13 @@ function conferma() {
         document.getElementById('button2').style.visibility = 'visible'
     }
 
+}
+// Questa funzione serve per visualizzare il resoconto dell'utente
+function finito()
+{
+    document.getElementById('button3').style.visibility = 'hidden'
+    document.getElementById('rispostaUtente').style.visibility = 'hidden'
+    document.getElementById('formDomanda').style.visibility = 'hidden'
+    document.getElementById('button').style.visibility = 'hidden'
+    document.getElementById('domanda').innerHTML = "HAI FINITO. <br> Ci sono state "+cont+" domande tra cui:<br> - "+contEsatto+" risposte corrette <br> - "+contSbagliato+ " risposte sbagliate" ;
 }
